@@ -1,7 +1,6 @@
 #Contador de votos online
-from sys import flags
 
-
+#Definimos las funciones que vamos a utilizar1
 def pantalla():
     import os
     return os.system("clear")
@@ -27,11 +26,16 @@ def salir():
     pantalla()
     flag = True
 
+
+#Realizamos una primera limpieza de pantalla
 pantalla()
+
+#Iniciamos flags y contadores en cero
 flag = False
 repu = 0
 demo = 0
 
+#Rutina basada en un while, sale de ella cuando Flag = True
 while not flag:
     print("         *** MENU ***")
     print("=============================")
@@ -43,14 +47,14 @@ while not flag:
     print("")
     opt = int(input("Ingrese una opción : "))
 
-    if opt == 1:
+    if opt == 1: #Invoca función que permite contar un voto republicano
         republicano()
 
-    elif opt == 2:
+    elif opt == 2: #Invoca función que permite contar un voto republicano
         democrata()
 
-    elif opt == 3:
+    elif opt == 3: #Invoca función que muestra en pantalla el conteo (NOTA: Se puede seguir con el conteo / No borra los datos)
         total(repu, demo)
 
-    else:
+    else: #Invoca función que permite salir del programa
         salir()

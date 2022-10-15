@@ -1,5 +1,4 @@
 #Contador de votos online
-
 #Definimos las funciones que vamos a utilizar1
 def pantalla():
     import os
